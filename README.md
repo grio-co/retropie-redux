@@ -1,6 +1,36 @@
 RetroPie-Setup
 ==============
 
+What's different in this fork
+-----------------------------
+
+This repository (`grioghar/retropie-redux`) is a fork of
+[RetroPie/RetroPie-Setup](https://github.com/RetroPie/RetroPie-Setup).
+
+**As of 2026-09-26 it carries no changes of its own.** The fork's `master`
+branch is identical to upstream `master` at commit
+[`15e11ce3`](https://github.com/RetroPie/RetroPie-Setup/commit/15e11ce388f5c4b9ffe4a5f300f071ff63cbdbd5)
+("openmsx: clear scriptmodule file exec bit", 2026-05-23): zero unique
+commits, and `git diff upstream/master...master` is empty. Upstream has moved
+on since then — its `master` is 40 commits ahead (at
+[`664d2537`](https://github.com/RetroPie/RetroPie-Setup/commit/664d2537d310edea267994097f800f82387f1a5d),
+"skyscraper: updates to scriptmodule (#4229)", 2026-09-16), so this fork is
+currently *behind* upstream rather than ahead of it.
+
+`master` is the only branch in this fork; there are no divergent feature
+branches holding unmerged work. The only fork-specific content is this
+section itself, added on the `chore/repo-hygiene-2026-09` branch.
+
+<!-- PLACEHOLDER(greg): what is "redux" meant to become? Once the fork diverges, replace the paragraph above with a summary of the changes grouped by theme, plus the commit count and the upstream commit they were compared against. -->
+
+To bring the fork level with upstream:
+
+```shell
+git remote add upstream https://github.com/RetroPie/RetroPie-Setup.git
+git fetch upstream master
+git merge --ff-only upstream/master
+```
+
 General Usage
 -------------
 
